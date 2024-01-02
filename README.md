@@ -56,8 +56,6 @@
     - Saddle Point = minimum in one dimension, maximum in another
     - As the number of dimensions increases, the occurrence of saddle points is also greater
 
-- There is a community that does not believe in deep learning, because deep learning does not provide any guarantees. SVMs, etc. provide guarantees on finding an optimal solution. Such guarantees do not exist with deep learning
-
 ### Cliffs
     - Highly non-linear error surfaces may also have cliffs
     - Occur for RNNs
