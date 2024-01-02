@@ -690,8 +690,6 @@ $$ p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{]theta}(x)}}
 
 - VAE takes a lot of computation: they approximate p(x) with a lower bound
 
-# 2021102016
-
 ## [Mitesh Khapra](http://www.cse.iitm.ac.in/~miteshk/), IIT Madras - Deep Learning for Word Embeddings
 
 - “You shall know a word by the company it keeps” - Firth., J. R. 1957:11
