@@ -1,7 +1,10 @@
-# 2021102016
+# Author: Ashish Chokhani
+# Course Title: Deep Learning
+# [Naresh Manwani]([https://faculty.iiit.ac.in/~naresh/](https://sites.google.com/site/nareshmanwani/home) - Deep Learning
 
-## [Naresh Manwani]([https://faculty.iiit.ac.in/~naresh/](https://sites.google.com/site/nareshmanwani/home) - Deep Learning
+--- 
 
+# Course Overview
 
 - Gradient Descent
 
