@@ -111,10 +111,6 @@
     - Compute the Gradient Delta from loss at the weights updated by the previous gradient delta, then combine this Gradient Delta with the previous gradient delta
     - Somehow works better than just momentum
 
-## Vineeth Balasubramanian - Backprop and Gradient Descent (13:30 to 15:30)
-
-- There is an optimal learning rate with which one can reach the global minimum in one step. It is equal to the inverse of the double derivative at the point from which we start
-
 ### RMSprop
 
 ### AdaGrad
@@ -155,18 +151,6 @@ $${\delta}w = -\frac{f’(x_{0}}{f’’(x_{0})}$$
     - We compute one Hessian, then we compute the difference to add to get the next Hessian
     - E.g. LGFBS
     - Approximations: Fischer Information, Diagonal approximation
-
-### Conjugate Gradient Descent
-    - Two vectors $x$ and $y$ are said to be conjugate w.r.t. A matrix A if $x^{T}Ay = 0$
-        - Here, y was the previous gradient update, A is the current Hessian, x is the new gradient update
-    - Compute the gradient, subtract some part of the previous gradient to get the conjugate component, compute the learning rate
-
-### Hessian-free Optimization
-    - Approximate the Hessian using the gradients
-
-### Natural Gradient
-    - Instead of using Euclidean distance to traverse along the error surface, travel along the surface of the manifold itself, the geodesic, the natural gradient
-    - [Revisiting natural gradients for deep networks, Razvan, ICLR 2014](https://arxiv.org/abs/1301.3584)
 
 - Generally, second-order methods are computationally intensive, first-order methods work just fine!
 
