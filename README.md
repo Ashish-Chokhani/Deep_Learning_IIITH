@@ -32,7 +32,6 @@
 
 
 
-## [Vineeth Balasubramanian](http://www.iith.ac.in/~vineethnb/index.html) - Backprop and Gradient Descent (11:30 to 13:00)
 
 - Loss function from $J$ and $W_{i, j}$
 
