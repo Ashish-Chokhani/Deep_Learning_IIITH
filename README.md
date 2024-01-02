@@ -321,9 +321,6 @@ $$h_{t} = z_{t} .* h_{t-1} + (1 - z_{t}) .* hh_{t}$$
 
 ### Stacking RNNs
 
-
-## [Ankush Gupta](www.robots.ox.ac.uk/~ankush/) (Oxford) - More on RNNs (11:00 to 12:30)
-
 - Many flavours of Sequence-to-Sequence problems
 
 - One-to-one (image classification), one-to-many (image captioning), many-to-one (video classification), asynchronous many-to-many (language translation), synchronous many-to-many (video labelling)
@@ -411,8 +408,6 @@ $$h_{t} = z_{t} .* h_{t-1} + (1 - z_{t}) .* hh_{t}$$
     - Quote/comment cell
     - Code depth cell (indentation)
 
-## [Ankush Gupta](www.robots.ox.ac.uk/~ankush/) (Oxford) - More on RNNs (13:30 to 15:00)
-
 ### ATTENTION MECHANISM
 
 - Compare source and target hidden states
@@ -437,10 +432,6 @@ $$h_{t} = z_{t} .* h_{t-1} + (1 - z_{t}) .* hh_{t}$$
 - Can be trained end-to-end
 
 - Finds alignment between input and outputs (through attention also)
-
-
-
-## [Vinay Namboodiri](https://www.cse.iitk.ac.in/users/vinaypn/), IIT Kanpur - GANs - I (11:00 to 12:30)
 
 - Problem to solve: unsupervised learning of (visual) representations
 
@@ -521,87 +512,14 @@ $$ J^{(G)} =  - {\frac{1}{2}}E_{z} log D(G(z) $$
 
 - Image Translation: Pix2Pix
     - But this uses pairs of images
-
-- [CycleGAN](https://github.com/junyanz/CycleGAN)
-    - Trains from 1 to generated 2, and back from 2 to 1 (hence, cycle)
-
 - [Next Video Frame Prediction [Lotter et al., 2016]](https://arxiv.org/abs/1605.08104)
 
-
-
-## [Vinay Namboodiri](https://www.cse.iitk.ac.in/users/vinaypn/), IIT Kanpur - GANs - II (13:30 to 14:30)
 
 ### [Unrolled GANs](https://arxiv.org/abs/1611.02163)
 
 - Based on letting the generator “peek ahead” at how the discriminator would see
 
 - Does much better than DCGANs
-
-### STABILITY/CONVERGENCE PROBLEMS
-
-### [Wasserstein GAN](https://arxiv.org/abs/1701.07875), [GitHub](https://github.com/martinarjovsky/WassersteinGAN)
-
-- Handles stability/convergence problems by letting the generator look ahead better
-
-- Uses Earth-mover’s Distance / Wasserstein Distance
-
-- But this means gradients could explode, so Weight Clamping is to be used (not BCE)
-
-### [Improved WGAN](https://arxiv.org/abs/1704.00028) (just 2 months later)
-
-- Improved resilience against exploding gradients: Gradient penalty if it deviates from unit norm
-
-### INTERPRETABILITY PROBLEMS
-
-### [InfoGAN](https://arxiv.org/abs/1606.03657)
-
-- Motivation: GANs use z in an entangled way; if a representation is unentangled, it could be made more interpretable
-
-- Maximises Mutual Information
-
-- Variational Maximisation of Mutual Information
-    - Use an approximate function Q(C | X) for p(C=c | X=x)
-
-- Sharing the net between Q(C | X) and the discriminator D(x)
-
-- MNIST example with 10-dimensional discrete class, and 2 continuous classes (possibly width adn rotation)
-
-- Faces example: pose, lighting, elevation
-
-### MODE COLLAPSE
-
-
-### [Mode Regularized GAN [Che et al., 2016]](https://arxiv.org/abs/1612.02136)
-
-1) Metric Regularizer
-    - Trying to learn an autoencoder
-
-2) Mode Regularizer
-
-### MULTI-AGENT FRAMEWORKS
-
-### [Generative Multi-Adversary Network [ICLR 2017]](https://openreview.net/pdf?id=Byk-VI9eg)
-
-- Multiple discriminators
-
-- Formidable Adversary: hold up against all discriminators
-    - Can be thought of as boosting
-    - Generator could give up when the adversaries get too formidable
-
-- Forgiving Teacher: have a variety of soft discriminators that can combine the outputs of multiple discriminators
-
-### [MAD GAN (Multi-Agent Diverse Generation)](https://arnabgho.github.io/MADGAN/)
-
-### SEQUENTIAL GANs
-
-### [Contextual RNN GAN for Abstract Reasoning Diagram Generation [AAAI 2017]](https://arnabgho.github.io/Contextual-RNN-GAN/)
-
-
-
-
-# 20170713
-
-## [Kaushik Mitra](http://www.ee.iitm.ac.in/kmitra/), IIT Madras - Variational Inference and Autoencoders (09:00 to 10:30)
 
 ### AUTOENCODERS
 
@@ -653,10 +571,6 @@ $$ J^{(G)} =  - {\frac{1}{2}}E_{z} log D(G(z) $$
 - Variational Inference
     - Variational lower bound for approximating marginal likelihood
     - Integration is now optimization: Reconstruction loss + Penalty
-
-
-
-## [Vineeth Balasubramanian](http://www.iith.ac.in/~vineethnb/) - VAE (11:00 to 12:30)
 
 ### VARIATIONAL AUTO-ENCODER
 
@@ -720,29 +634,11 @@ $$ p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{]theta}(x)}}
 
 - Took $q_{\phi}$ as a mixture of Gaussians
 
-### Deep Convolutional Inverse Graphics Network
-
-- Train by a subset of components of z with one type of variation
-    - Vary lighting and only sample from a subset of components, etc.
-
-### Adversarial Autoencoders
-
-- Ask a Discriminator to make out the difference between a sample z from the Encoder, and a sample from the actual prior (Gaussian)
-
 ### Applications
     - Image and video generation
     - Super-resolution
     - Forecasting from static images
     - Inpainting
-
-
-
-## [Vineeth Balasubramanian](http://www.iith.ac.in/~vineethnb/) - VAE (13:30 to 14:30)
-
-### Recurrent VAE
-
-
-## Kaishuk Mitra, IIT Madras (14:30 - 15:30)
 
 ### AUTOREGRESSIVE MODELS
 
