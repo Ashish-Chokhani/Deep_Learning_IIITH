@@ -1,6 +1,6 @@
 # 20170710
 
-## [Naresh Manwani](https://faculty.iiit.ac.in/~jawahar/) - Intro to Deep Learning and Optimization (09:30 to 11:00)
+## [Naresh Manwani]([https://faculty.iiit.ac.in/~jawahar/](https://sites.google.com/site/nareshmanwani/home) - Deep Learning
 
 
 - Gradient Descent
