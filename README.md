@@ -249,17 +249,8 @@ $${\delta}w = -\frac{f’(x_{0}}{f’’(x_{0})}$$
 
 - Parametric ReLU: Same as LeakyReLU, but a different slope for negative values than LeakyReLU
 
-- ELU
-    - ReLU gives a positive value as the average, but they said the average is supposed to be 0
-    - So they made ELU which maintains the average 0
-    - For negative activations: ${\alpha}*({\exp}^{r} - 1)$
-
 - MaxOut: generalization of ReLU
     - Take the max of a bunch of network activations
-
-- ELUs are slowly becoming popular
-
-- Never use sigmoid
 
 - Try tanh, but expect it to work worse than ReLU/MaxOut
 
@@ -287,13 +278,6 @@ $${\delta}w = -\frac{f’(x_{0}}{f’’(x_{0})}$$
 - Caffe made a simpler implementation
 
 - He made a better implementation because Caffe’s didn’t work for ReLU: [Delving deep into rectifiers, [He et al.]](https://arxiv.org/abs/1502.01852)
-
-
-
-
-# 20170711
-
-## [Girish Varma](https://www.iiit.ac.in/people/faculty/girish.varma/) - RNNs (09:30 to 10:30)
 
 - RNNs
 
@@ -443,8 +427,6 @@ $$h_{t} = z_{t} .* h_{t-1} + (1 - z_{t}) .* hh_{t}$$
 
 - Attention Mask: can tell which part of the input corresponded with maximal output
     - [[Donahue et al., CVPR 2015]](https://arxiv.org/abs/1411.4389)
-
-- http://distill.pub/
 
 ### CONCLUSION
 
