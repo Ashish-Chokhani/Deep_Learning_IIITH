@@ -1,6 +1,6 @@
 # 20170710
 
-## [Naresh Manwani]([https://faculty.iiit.ac.in/~jawahar/](https://sites.google.com/site/nareshmanwani/home) - Deep Learning
+## [Naresh Manwani]([https://faculty.iiit.ac.in/~naresh/](https://sites.google.com/site/nareshmanwani/home) - Deep Learning
 
 
 - Gradient Descent
