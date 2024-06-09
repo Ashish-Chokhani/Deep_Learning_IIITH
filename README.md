@@ -715,7 +715,7 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
 
 - But this is still high-dimensional. We want another approximation W, lesser dimensional than X, s.t. W*W^T gives me the same score as X*X^T
      $$X X^{T} = (U\Sigma V^{T})(U\Sigma V^{T})^{T} = (U\Sigma V^{T})(V\Sigma U^{T}) = U\Sigma (U\Sigma)^{T}$$, because V is orthonormal (VV^T = I).
-- So, $\( U\Sigma \)$ is a good matrix to be our \( W \), since it is low-dimensional \((m \times k)\).
+- So, $\( U\Sigma \)$ is a good matrix to be our $\( W \)$, since it is low-dimensional $\((m \times k)\)$.
 - Its pre-deep learning method
 
 ### CONTINUOUS BAG OF WORDS (CBoW)
