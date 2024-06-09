@@ -1,6 +1,6 @@
 # Author: Ashish Chokhani
 # Course Title: Deep Learning
-[Naresh Manwani]([https://faculty.iiit.ac.in/~naresh/](https://sites.google.com/site/nareshmanwani/home) - Deep Learning
+[Naresh Manwani]([https://faculty.iiit.ac.in/~naresh](https://sites.google.com/site/nareshmanwani/home) - Deep Learning
 
 --- 
 
@@ -574,8 +574,6 @@ $$ J^{(G)} =  - {\frac{1}{2}}E_{z} log D(G(z) $$
     - Variational lower bound for approximating marginal likelihood
     - Integration is now optimization: Reconstruction loss + Penalty
 
-### VARIATIONAL AUTO-ENCODER
-
 - Latent variable mapping [Aaron Courville, Deep Learning Summer School 2015]
     - Trying to discover the manifold in the higher-dimensional space, trying to find the lower-dimensional numbers
 
@@ -724,3 +722,6 @@ $$ p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{]theta}(x)}}
 ### CONTINUOUS BAG OF WORDS (CBoW)
 
 - Given a bag of n context words as the input to a neural network, predict the (n+1)^{th}word as the softmax output of the network.
+
+### Diffusion Models
+Diffusion models are a class of likelihood-based generative models that recently have been used to produce very high quality images compared to other existing generative models like GANs. For example, take a look at the latest research [Imagen](https://imagen.research.google/) or [GLIDEwhere](https://arxiv.org/abs/2112.10741) the authors used diffusion models to generate very high quality images.
