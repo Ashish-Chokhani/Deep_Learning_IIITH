@@ -721,7 +721,7 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
 
 ### CONTINUOUS BAG OF WORDS (CBoW)
 
-- Given a bag of n context words as the input to a neural network, predict the (n+1)^{th}word as the softmax output of the network.
+- Given a bag of n context words as the input to a neural network, predict the $(n+1)^{th}$word as the softmax output of the network.
 
 ### Diffusion Models
 Diffusion models are a class of likelihood-based generative models that recently have been used to produce very high quality images compared to other existing generative models like GANs. For example, take a look at the latest research [Imagen](https://imagen.research.google/) or [GLIDEwhere](https://arxiv.org/abs/2112.10741) the authors used diffusion models to generate very high quality images.
