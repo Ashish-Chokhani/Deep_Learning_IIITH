@@ -703,7 +703,7 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
 - Stop words will have high frequency in the Co-occurrence Matrix without offering anything in terms of context. Remove them.
 
 - Instead of counts, use Point-wise Mutual Information:
-    - $$\[ \text{PMI}(w, c) = \log \left( \frac{p(c | w)}{p(c)} \right) = \log \left( \frac{\text{count}(w, c) \cdot N}{\text{count}(c) \cdot \text{count}(w)} \right) \]$$
+     $$\text{PMI}(w, c) = \log \left( \frac{p(c | w)}{p(c)} \right) = \log \left( \frac{\text{count}(w, c) \cdot N}{\text{count}(c) \cdot \text{count}(w)} \right)$$
     - So Mutual Information is low when both words occur quite frequently in the corpus but don’t appear together very frequently
     - PMI = 0 is a problem. So, only consider Positive PMI (PPMI): PPMI=PMI when PMI>0, PPMI=0 else
 
