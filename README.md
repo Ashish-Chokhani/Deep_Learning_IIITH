@@ -719,6 +719,7 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
 - It's pre-deep learning methods.
 
 
+
 ### CONTINUOUS BAG OF WORDS (CBoW)
 
 - Given a bag of n context words as the input to a neural network, predict the $(n+1)^{th}$ word as the softmax output of the network.
