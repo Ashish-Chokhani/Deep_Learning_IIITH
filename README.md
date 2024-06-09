@@ -680,7 +680,7 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
 
 - Generative modelling: versatile and general
 
-- MAP inference: $\arg \max_X p(Y | X) \cdot p(X)$
+- MAP inference: $$\arg \max_X p(Y | X) \cdot p(X)$$
 
 - Traditional approach: Dictionary learning
     - [Video dictionary [Hitomi et al., 2011]](http://www.cs.toronto.edu/~kyros/courses/2530/papers/Lecture-10/Hitomi2011.pdf)
