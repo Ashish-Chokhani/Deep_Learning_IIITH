@@ -595,12 +595,12 @@ $$ J^{(G)} =  - {\frac{1}{2}}E_{z} log D(G(z) $$
 
 - From Bayes’ theorem,
 
-$$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{]theta}(x)}}$$
+$$p_{\theta}(z | x)$ = ${\frac{p_{\theta}(x | z)$ * $p_{\theta}(z)}{p_{]theta}(x)}}$$
 
 - Here, $p_{\theta}(x | z)$ can be found from the decoder network,  $p_{\theta}(z)$ is assumed to be a Gaussian, BUT $p_{]theta}(x)$ is intractable. 
-    - Because, to find $p_{]theta}(x)$, we need to integrate over all x’s on all values of z
+    - Because, to find $p_{\theta}(x)$, we need to integrate over all x’s on all values of z
 
-- So, $p_{\theta}(z | x)$ is very hard to find, since we don’t know $p_{]theta}(x)$
+- So, $p_{\theta}(z | x)$ is very hard to find, since we don’t know $p_{\theta}(x)$
 
 - Instead, we approximate this posterior with a new posterior called $q_{\phi}(z | x)$, and then try to minimize the KL divergence between $q_{\phi}(z | x)$ and $p_{\theta}(z | x)$
 
