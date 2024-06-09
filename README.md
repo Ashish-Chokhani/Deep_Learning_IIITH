@@ -714,10 +714,9 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
 - X*X^T is the matrix of the cosine similarity between the words. X*X^T(i, j) captures the similarity between the i^{th} and j^{th} words. 
 
 - But this is still high-dimensional. We want another approximation W, lesser dimensional than X, s.t. W*W^T gives me the same score as X*X^T
-    - $X*X^T = (U{\Sigma}V^T)*(U{\Sigma}V^T)^T = (U{\Sigma}V^T)*{V{\Sigma}U^T} = U{\Sigma}*(U{\Sigma})^T$, because V is orthonormal (V*V^T = I).
-    - So, U{\Sigma} is a good matrix to be our W, since it is low-dimensional (m x k).
-
-- Iti pre-deep learning methods
+    - $$X X^{T} = (U\Sigma V^{T})(U\Sigma V^{T})^{T} = (U\Sigma V^{T})(V\Sigma U^{T}) = U\Sigma (U\Sigma)^{T}$$, because V is orthonormal (VV^T = I).
+- So, \( U\Sigma \) is a good matrix to be our \( W \), since it is low-dimensional \((m \times k)\).
+- Its pre-deep learning methods
 
 ### CONTINUOUS BAG OF WORDS (CBoW)
 
