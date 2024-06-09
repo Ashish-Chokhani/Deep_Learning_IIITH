@@ -676,59 +676,52 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
 
 - Con: there has to be a separate model each type of degradation
 
-- Degraded image: \( Y = A \cdot X + n \)
+- Degraded image: Y = A*X + n
 
 - Generative modelling: versatile and general
 
-- MAP inference: \( \arg \max_X p(Y | X) \cdot p(X) \)
+- MAP inference: arg max_X p(Y | X)*p(X)
 
 - Traditional approach: Dictionary learning
     - [Video dictionary [Hitomi et al., 2011]](http://www.cs.toronto.edu/~kyros/courses/2530/papers/Lecture-10/Hitomi2011.pdf)
     - But, difficult to capture long-range dependencies
 
-- GANs are out of the question, since they don’t model \( p(x) \) explicitly. MAP inference is not possible.
+- GANs are out of the question, since they don’t model p(x) explicitly. MAP inference is not possible.
 
-- VAE takes a lot of computation: they approximate \( p(x) \) with a lower bound
+- VAE takes a lot of computation: they approximate p(x) with a lower bound
 
 ## [Mitesh Khapra](http://www.cse.iitm.ac.in/~miteshk/), IIT Madras - Deep Learning for Word Embeddings
 
 - “You shall know a word by the company it keeps” - Firth., J. R. 1957:11
 
-- In One-Hot Encoding, every pair of points is \( \sqrt{2} \) Euclidean distance between them. Using any distance metric, every pair of words is equally distant from each other. But we want an embedding that captures the inherent contextual similarity between words
+- In One-Hot Encoding, every pair of points is sq(2) Euclidean distance between them. Using any distance metric, every pair of words is equally distant from each other. But we want an embedding that captures the inherent contextual similarity between words
 
 - A Co-occurrence Matrix is a terms x terms matrix which captures the number of times a term appears in the context of another term
-    - The context is defined as a window of \( k \) words around the terms
+    - The context is defined as a window of k words around the terms
     - This is also called a word x content matrix
 
 - Stop words will have high frequency in the Co-occurrence Matrix without offering anything in terms of context. Remove them.
 
 - Instead of counts, use Point-wise Mutual Information:
-    - \( \text{PMI}(w, c) = \log \left( \frac{p(c | w)}{p(c)} \right) = \log \left( \frac{\text{count}(w, c) \cdot N}{\text{count}(c) \cdot \text{count}(w)} \right) \)
+    - PMI(w, c) = log(p(c | w)/p(c)) = log(count(w, c)*N/(count(c)*count(w)))
     - So Mutual Information is low when both words occur quite frequently in the corpus but don’t appear together very frequently
-    - PMI = 0 is a problem. So, only consider Positive PMI (PPMI): 
-      \[
-      \text{PPMI} = \begin{cases} 
-      \text{PMI} & \text{if } \text{PMI} > 0 \\
-      0 & \text{else}
-      \end{cases}
-      \]
+    - PMI = 0 is a problem. So, only consider Positive PMI (PPMI): PPMI=PMI when PMI>0, PPMI=0 else
 
 - It’s still very high-dimensional and sparse. Use PCA:
-    - SVD: \( X_{m \times n} = U_{m \times k} \Sigma_{k \times k} V^T_{k \times n} \), where \( k \) is the rank of the matrix \( X \)
-    - Make \( k = 1 \), or any number lesser than the rank of \( X \), and \( U \Sigma V^T \) is still an \( m \times n \) matrix, but it is an approximation of the original \( X \), wherein the vectors are projected along the most important dimensions, and it is no longer sparse
+    - SVD: X_{mxn} = U_{mxk}{\Sigma}_{kxk}V^T_{kxn}, where k is the rank of the matrix X
+    - Make k = 1, or any number lesser than the rank of X, and U*{\Sigma}*V^T is still an mxn matrix, but it is an approximation of the original X, wherein the vectors are projected along the most important dimensions, and it is no longer sparse
 
-- \( X \cdot X^T \) is the matrix of the cosine similarity between the words. \( X \cdot X^T(i, j) \) captures the similarity between the \( i^{th} \) and \( j^{th} \) words.
+- X*X^T is the matrix of the cosine similarity between the words. X*X^T(i, j) captures the similarity between the i^{th} and j^{th} words. 
 
-- But this is still high-dimensional. We want another approximation \( W \), lesser dimensional than \( X \), such that \( W \cdot W^T \) gives the same score as \( X \cdot X^T \)
-  \[
-  X \cdot X^{T} = (U \Sigma V^{T})(U \Sigma V^{T})^{T} = (U \Sigma V^{T})(V \Sigma U^{T}) = U \Sigma (U \Sigma)^{T}
-  \]
-  because \( V \) is orthonormal (\( V V^T = I \)).
+- But this is still high-dimensional. We want another approximation W, lesser dimensional than X, s.t. W*W^T gives me the same score as X*X^T
+     $$X X^{T} = (U\Sigma V^{T})(U\Sigma V^{T})^{T} = (U\Sigma V^{T})(V\Sigma U^{T}) = U\Sigma (U\Sigma)^{T}$$, because V is orthonormal (VV^T = I).
+- So, \( U\Sigma \) is a good matrix to be our \( W \), since it is low-dimensional \((m \times k)\).
+- Its pre-deep learning method
 
-- So, \( U \Sigma \) is a good matrix to be our \( W \), since it is low-dimensional \((m \times k)\).
+I am trying Markdown of github but mathematical expressions are not rendering apart from:
+$$X X^{T} = (U\Sigma V^{T})(U\Sigma V^{T})^{T} = (U\Sigma V^{T})(V\Sigma U^{T}) = U\Sigma (U\Sigma)^{T}$$
 
-- It's a pre-deep learning method
-
+Can you correct it?
 
 ### CONTINUOUS BAG OF WORDS (CBoW)
 
