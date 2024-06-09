@@ -608,7 +608,7 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
 
 - Data point x -> Encoder: mean, (diagonal) covariance of $q_{\phi}(z | x)$ -> Sample $z$ from $q_{\phi}(z | x)$ -> Decoder: mean, (diagonal) covariance of $p_{\theta}(x | z)$ -> Sample $hat{x}$ from $p_{\theta}(z | x)$
 
-- Reconstruction loss for $hat{x}$, Regularization loss on prior  $p_{\theta}(x)
+- Reconstruction loss for $hat{x}$, Regularization loss on prior  $p_{\theta}(x)$
 
 - Reparametrization trick
     - Because we’re sampling in between, it is not back-propagatable, since we need to differentiate through the sampling process
