@@ -708,7 +708,7 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{\theta}(x)}}$
     - PMI = 0 is a problem. So, only consider Positive PMI (PPMI): PPMI=PMI when PMI>0, PPMI=0 else
 
 - It’s still very high-dimensional and sparse. Use PCA:
-    - SVD: $$X_{mxn} = U_{mxk}{\Sigma}_{kxk}V^T_{kxn}$$, where k is the rank of the matrix X
+    - SVD: $$X_{m \times n} = U_{m \times k} \Sigma_{k \times k} V^T_{k \times n}$$, where k is the rank of the matrix X
     - Make k = 1, or any number lesser than the rank of X, and U*{\Sigma}*V^T is still an mxn matrix, but it is an approximation of the original X, wherein the vectors are projected along the most important dimensions, and it is no longer sparse
 
 - $X X^{T}$ is the matrix of the cosine similarity between the words. $X X^{T}(i,j)$ captures the similarity between the $i^{th}$ and $j^{th}$ words. 
