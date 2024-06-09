@@ -602,7 +602,7 @@ $$p_{\theta}(z | x) = {\frac{p_{\theta}(x | z) * p_{\theta}(z)}{p_{]theta}(x)}}$
 
 - So, $p_{\theta}(z | x)$ is very hard to find, since we don’t know $p_{]theta}(x)$
 
-- Instead, we approximate this posterior with a new posterior called $q_{\phi}(z | x)$, and then try to minimize the KL divergence between $q_{\phi}(z | x)$ and $p_{\theta}(z | x)
+- Instead, we approximate this posterior with a new posterior called $q_{\phi}(z | x)$, and then try to minimize the KL divergence between $q_{\phi}(z | x)$ and $p_{\theta}(z | x)$
 
 - We get $q_{\phi}(z | x)$ from the encoder network.
 
